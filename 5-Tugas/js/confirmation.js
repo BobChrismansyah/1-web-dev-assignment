@@ -29,7 +29,7 @@ btnAddItem.addEventListener('click', () => {
   }
 
   if (database.has(ITEM_KEY)) {
-    alert(`Kamu sudah menambahkan ${ITEM_VALUE}`);
+    alert(`Kamu sudah menambahkan "${ITEM_VALUE}"`);
     inputItem.value = '';
     inputItem.focus();
     return;
@@ -47,7 +47,7 @@ btnAddItem.addEventListener('click', () => {
   listContainer.appendChild(listItem);
 
   btnDelete.addEventListener('click', () => {
-    let dialog_konfirmasi = confirm(`Yakin ingin menghapus list ${ITEM_VALUE}?`);
+    let dialog_konfirmasi = confirm(`Yakin ingin menghapus list "${ITEM_VALUE}"?`);
     if (dialog_konfirmasi === false) return;
     listContainer.removeChild(listItem);
     //memberikan informasi ya atau tidak
